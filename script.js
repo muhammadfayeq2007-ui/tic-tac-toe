@@ -131,7 +131,9 @@ function DisplayController(gameEngine) {
 
     const gridDisplay = document.querySelector("#gridDisplay")
     const statusBox = document.querySelector("#status");
+    
     function generateBoard() {
+        alert("GENERATING BOARD");
         for (let i = 0; i < 9; i++) {
 
             let gridBox = document.createElement("div");
@@ -231,9 +233,10 @@ player2Text.addEventListener("keydown", (e) => {
         player2.style.display = "none";
         count++;
 
-        if (count === 2) {
-            const Display = DisplayController(gameEngine);
-        }
+       if (count === 2) {
+    alert("COUNT IS 2");
+    DisplayController(gameEngine);
+}
 
     }
 })
