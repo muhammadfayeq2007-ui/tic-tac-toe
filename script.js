@@ -215,7 +215,7 @@ let PlayerX = Player("X", "");
 let PlayerO = Player("O", "");
 let count = 0;
 
-player1.addEventListener("keydown", (e) => {
+player1Text.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
         PlayerX.name = player1Text.value;
 
@@ -224,7 +224,7 @@ player1.addEventListener("keydown", (e) => {
 
     }
 })
-player2.addEventListener("keydown", (e) => {
+player2Text.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
 
         PlayerO.name = player2Text.value;
