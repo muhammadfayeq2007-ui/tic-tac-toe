@@ -131,9 +131,7 @@ function DisplayController(gameEngine) {
 
     const gridDisplay = document.querySelector("#gridDisplay")
     const statusBox = document.querySelector("#status");
-    
     function generateBoard() {
-        alert("GENERATING BOARD");
         for (let i = 0; i < 9; i++) {
 
             let gridBox = document.createElement("div");
@@ -217,26 +215,29 @@ let PlayerX = Player("X", "");
 let PlayerO = Player("O", "");
 let count = 0;
 
-player1Text.addEventListener("keydown", (e) => {
+player1.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
         PlayerX.name = player1Text.value;
 
         player1.style.display = "none";
         count++;
 
+        if (count === 2) {
+            const Display = DisplayController(gameEngine);
+        }
+
     }
 })
-player2Text.addEventListener("keydown", (e) => {
+player2.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
 
         PlayerO.name = player2Text.value;
         player2.style.display = "none";
         count++;
 
-       if (count === 2) {
-    alert("COUNT IS 2");
-    DisplayController(gameEngine);
-}
+        if (count === 2) {
+            const Display = DisplayController(gameEngine);
+        }
 
     }
 })
